@@ -52,6 +52,8 @@ function cachedPrebuild (url) {
 }
 
 function npmCache () {
+
+  console.log(require('util').inspect(process.env, {colors:true, depth: null }));
   return process.env.APPDATA ? path.join(process.env.APPDATA, 'npm-cache') : path.join(home(), '.npm')
 }
 
